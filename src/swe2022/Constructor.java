@@ -1,20 +1,37 @@
 package swe2022;
 
+import java.util.ArrayList;
+
 public class Constructor {
 
-    private String firstName;
+
+    String firstName;
     private String lastName;
-    public Constructor() {
-        this(fname:"mike",lname:"m")
+    String seperator;
+    private ArrayList<String> friends;
+    {
+        seperator = " ";
+    }
+    {
+        friends = new ArrayList<>();
+        friends.add("mike");
+        friends.add("jane");
+    }
+
+    public Constructor(){
+        this("john", "doe");
     }
     public Constructor(String fname){
-        this(fname, lname:"m");
+        this(fname, "doe");
     }
-    public Constructor(String fname. String lname){
+    public Constructor(String fname, String lname){
         firstName = fname;
         lastName = lname;
     }
     public String getName(){
-        return firstName + " " + lastName;
+        return firstName + seperator + lastName;
+    }
+    public String getFriend(int index){
+        return this.friends.get(index) + " is " + this.getName() + "'s friend";
     }
 }
