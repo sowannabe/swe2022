@@ -16,6 +16,7 @@ public class Network {
             unenroll(this);//이게 바른 코드. 실제로는 outer.unenroll~ 인데 outer생략. 캡슐화.
         }
         public boolean belongsTo(Network n){
+
             return n == Network.this;
         }
     }

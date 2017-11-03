@@ -30,7 +30,7 @@ public class Main {
         }
     }
 
-
+    //*
     static void doWork(){}
     static void main(String[ ] arg){
         Runnable task = new Run();//이게 중첩클래스
@@ -39,9 +39,9 @@ public class Main {
         };//위랑 같은 것을 람다로 구현하는 식.
         Comparator<String> comp1 = new LengthComparator();
         Comparator<String> comp2 = (f,s)->f.length()-s.length();
-        comp2.compare();// 이걸 불러오기 전까지 코드 실행 지연이 일어난다.
+        //comp2.compare();// 이걸 불러오기 전까지 코드 실행 지연이 일어난다.
 
-        Employee me = new Employee(), you = new Employee();
-        Employee[] members =
+      //  Employee me = new Employee(), you = new Employee();
+    //    Employee[] members =
     }
 }

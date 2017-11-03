@@ -8,7 +8,7 @@ public class Network2 {
         private String name;
         private ArrayList<Member> friends = new ArrayList<>();
 
-        public Member(Network2 outer.String name){
+        public Member(Network2 outer,String name){
             this.outer = outer;
             this.name = name;
 
@@ -22,13 +22,14 @@ public class Network2 {
         }
     }
     //network2-------------------------------
-    private ArrayList<Member> member2 = new ArrayList<();
+    private ArrayList<Member> members = new ArrayList<>();
     public Member enroll(String name){
-        Member newMember = new Member(this);
-        member2.add(newMember);
+        Member newMember = new Member(this,name);
+        members.add(newMember);
         return newMember;
     }
     public void unenroll(Member member){
+
         members.remove(member);
     }
 
