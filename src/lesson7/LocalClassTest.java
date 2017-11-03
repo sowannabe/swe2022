@@ -12,6 +12,24 @@ public class LocalClassTest {
     }
     private static Random generator = new Random();
     public  static IntSequence randomInts(int low, int high){
+         /*내부클래스
+        class RandomSquence implements IntSequence{
+            @Override
+            public int next() {
+                return low + generator.nextInt(high - low + 1);
+            }
+        }
+        return new RandomSquence();
+        */
+        /*익명클래스
+        return new IntSequence(){
+            @Override
+            public int next() {
+                return low + generator.nextInt(high - low + 1);
+            }
+        };
+        */
+        //람다 수준
        return ()-> low + generator.nextInt(high-low+1);//low와 high는 자유변수 선언되는 순간부터 상수화.(캡쳐)
 
     }
