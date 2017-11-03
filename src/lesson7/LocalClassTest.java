@@ -12,13 +12,7 @@ public class LocalClassTest {
     }
     private static Random generator = new Random();
     public  static IntSequence randomInts(int low, int high){
-        class RandomSequence implements IntSequence{
+       return ()-> low + generator.nextInt(high-low+1);//low와 high는 자유변수 선언되는 순간부터 상수화.(캡쳐)
 
-            @Override
-            public int next() {
-                return low + generator.nextInt(high-low+1);//low와 high는 자유변수 선언되는 순간부터 상수화.(캡쳐)
-            }
-        }
-        return new RandomSequence();
     }
 }
