@@ -3,6 +3,15 @@ package Practice;
 import java.util.Scanner;
 
 public class TodoTask extends TodoList {
+
+    public void add(String task){
+
+
+    }
+
+
+
+
     public static void main(String[] arg){
         TodoTask name = new TodoTask();
         Scanner in =new Scanner(System.in);
