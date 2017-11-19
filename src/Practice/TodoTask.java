@@ -1,11 +1,27 @@
 package Practice;
 
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class TodoTask extends TodoList {
 
     public void add(String task){
+        int year = 0;
+        int month = 0;
+        LocalDate date = LocalDate.of(year, month, 1);
 
+        while (date.getMonthValue() == month){
+            System.out.printf("%4d", date.getDayOfMonth());
+            date = date.plusDays(1);
+        }
+
+        DayOfWeek weekday = date.getDayOfWeek();
+
+        int value = weekday.getValue();
+        for(int i =1; i<value;i++){
+            System.out.print("  ");
+        }
 
     }
 
