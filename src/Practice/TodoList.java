@@ -6,13 +6,13 @@ import java.util.Comparator;
 
 public class TodoList{
     private String listName;
-    ArrayList<Todotask> todoTasks = new ArrayList<>();
+    ArrayList<TodoTask> todoTasks = new ArrayList<>();
     private TodoTheme listTheme;
     boolean listSorted;
 
     public TodoList(String listname){
         this.listName=listname;
-        this.todoTasks = new ArrayList<Todotask>();
+        this.todoTasks = new ArrayList<TodoTask>();
         this.listSorted = false;
         this.listTheme=new TodoTheme();
     }
