@@ -4,7 +4,25 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class TodoTask extends TodoList {
+public class TodoTask {
+
+    private String taskName;
+    private LocalDate deadline;
+    private LocalDate alarm=null;
+    private final LocalDate createTime=LocalDate.now();
+    private boolean complete = false;
+
+    public void setName(String taskName){
+        this.taskName = taskName;
+    }
+
+    public void complete(TodoTask task){
+        task.complete = true;
+    }
+
+    public void xcomplete(TodoTask task){
+        task.complete=false;
+    }
 
     public void add(String task){
         int year = 0;
