@@ -12,6 +12,10 @@ public class TodoTask {
     private final LocalDate createTime=LocalDate.now();
     private boolean complete = false;
 
+    public TodoTask(String homework) {
+
+    }
+
     public void setName(String taskName){
         this.taskName = taskName;
     }
